@@ -8,7 +8,6 @@ import logo from '../../assets/logo.svg';
 const {SubMenu} = Menu;
 const {Header, Content, Sider} = Layout;
 
-//style={{ alignItems:'center',display: 'flex', padding: ' 0 20px', color: '#fff', fontSize: 20, fontWeight: 'bold' }}
 class App extends Component {
 
 
@@ -23,7 +22,7 @@ class App extends Component {
 
         return (
             <Layout>
-                <Header style={{padding: '0 20px'}} className='header'>
+                <Header className='header'>
                     <img alt='logo' src={logo} width='34px' height='34px'/>
                     <span style={{marginLeft: 15}}>华币数字交易所</span>
                 </Header>
@@ -32,7 +31,7 @@ class App extends Component {
                     <Sider width={225} style={{background: '#fff'}}>
 
                         <Menu onClick={this.onMenuSelected.bind(this)} mode={"inline"}
-                              style={{height: '100%', borderRight: 0}}>
+                              style={{height: '100%'}}>
                             <Menu.Item key="概览">
                                 <Icon type="ant-design"/> <span>概览</span>
                             </Menu.Item>
