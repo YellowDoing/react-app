@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Account.css';
-import { Table, Pagination, Icon } from 'antd';
+import { Table, Pagination} from 'antd';
 
 
 const data = [{

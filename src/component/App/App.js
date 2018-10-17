@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-import logo from '../../assets/logo.svg';
 import Account from '../Account/Account'
+import MyHeader from '../MyHeader/MyHeader'
 
 
 const { SubMenu } = Menu;
@@ -24,8 +24,8 @@ class App extends Component {
         return (
             <Layout>
                 <Header className='header'>
-                    <img alt='logo' src={logo} width='34px' height='34px' />
-                    <span style={{ marginLeft: 15 }}>华币数字交易所</span>
+                    <MyHeader />
+                
                 </Header>
 
                 <Layout>

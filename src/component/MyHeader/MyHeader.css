@@ -1,0 +1,24 @@
+
+.title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+.avatar{
+    /* //align-self: flex-end; */
+}
+
+.name{
+    color: #fff;
+    margin-left: 10px;
+}
+
+.user{
+    align-items:center;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+    padding-right: 15px
+}
