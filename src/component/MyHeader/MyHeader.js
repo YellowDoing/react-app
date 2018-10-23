@@ -1,21 +1,36 @@
 import React, { Component, Fragment } from 'react';
 import logo from '../../assets/logo.svg';
 import './MyHeader.css';
-import { Avatar } from 'antd';
+import { Avatar, Dropdown, Menu, Icon } from 'antd';
 
 
 class MyHeader extends Component {
+
+    menu = (<Menu style={{ paddingRight: '15px' }} onClick={this.handleMenuClick}>
+        <Menu.Item key="1"><Icon type="user" />个人中心</Menu.Item>
+        <Menu.Item key="2"><Icon type="setting" />退出登录</Menu.Item>
+
+    </Menu>);
+
+
+    handleMenuClick() {
+        alert("aaaaaa")
+    };
+
 
     render() {
         return (
             <Fragment>
                 <img alt='logo' src={logo} width='34px' height='34px' />
-                <span className='title' >华币数字交易所</span>
+                <span className='title'>华币数字交易所</span>
                 <div className='user'>
-                    <span className='name'>用户名</span>
-                    <Avatar className='avatar' icon="user" />
+                    <Dropdown placement='bottomCenter' overlay={this.menu}>
+                        <div>
+                            <Avatar className='avatar' icon="user" />
+                            <span className='name'>用户名</span>
+                        </div>
+                    </Dropdown>
                 </div>
-
             </Fragment>
         )
     }

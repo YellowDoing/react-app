@@ -62,7 +62,7 @@ const columns = [{
     title: '用户名',
     dataIndex: 'nickname',
     key: 'nickname',
-    render: text => <a>{text}</a>,
+    render: text => <a href>{text}</a>,
 }, {
     title: '手机号',
     dataIndex: 'phone',
@@ -77,9 +77,9 @@ const columns = [{
     width: 130,
     render: (text, record) => (
         <span>
-            <a href="#">编辑</a>
+            <a href>编辑</a>
             <span className="ant-divider" />
-            <a href="#">删除</a>
+            <a href>删除</a>
             <span className="ant-divider" />
         </span>
     ),
