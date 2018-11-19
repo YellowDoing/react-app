@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Spin,Layout, Menu, Breadcrumb, Icon } from 'antd';
 import Account from '../Account/Account'
 import MyHeader from '../MyHeader/MyHeader'
 
@@ -64,10 +64,12 @@ class App extends Component {
                             }
                         </Breadcrumb>
 
-                        <Content style={{ background: '#fff', padding: 0, margin: 0, minHeight: 280 }}>
-                            <Account />
-                        </Content>
+                        <Spin size="large">
+                            <Content style={{ background: '#fff', padding: 0, margin: 0, minHeight: 280 }}>
+                                <Account />
+                            </Content>
 
+                        </Spin>
                     </Layout>
                 </Layout>
             </Layout>
