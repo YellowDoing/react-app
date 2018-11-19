@@ -2,9 +2,11 @@ import React, { Component, Fragment } from 'react';
 import logo from '../../assets/logo.svg';
 import './MyHeader.css';
 import { Avatar, Dropdown, Menu, Icon } from 'antd';
+import Axios from 'axios';
 
 
 class MyHeader extends Component {
+
 
     menu = (<Menu style={{ paddingRight: '15px' }} onClick={this.handleMenuClick}>
         <Menu.Item key="1"><Icon type="user" />个人中心</Menu.Item>
@@ -13,8 +15,15 @@ class MyHeader extends Component {
     </Menu>);
 
 
+componentDidMount(){
+    Axios.post('/user').then(function (response) {
+        console.log(response);
+    })
+}
+
     handleMenuClick() {
-        alert("aaaaaa")
+        alert('asdawdasdw')
+       
     };
 
 
