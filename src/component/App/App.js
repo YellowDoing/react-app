@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { Spin,Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Spin, Layout, Menu, Breadcrumb, Icon } from 'antd';
 import Account from '../Account/Account'
 import MyHeader from '../MyHeader/MyHeader'
 
@@ -11,11 +11,11 @@ const { Header, Content, Sider } = Layout;
 
 class App extends Component {
 
-
     constructor(props) {
         super(props);
         this.state = {
-            Breadcrumbs: ['概览']
+            Breadcrumbs: ['概览'],
+            loading: false
         };
     }
 
@@ -25,7 +25,6 @@ class App extends Component {
             <Layout>
                 <Header className='header'>
                     <MyHeader />
-                
                 </Header>
 
                 <Layout>
@@ -64,11 +63,10 @@ class App extends Component {
                             }
                         </Breadcrumb>
 
-                        <Spin size="large">
+                        <Spin size="large" spinning={this.state.loading} delay={500}>
                             <Content style={{ background: '#fff', padding: 0, margin: 0, minHeight: 280 }}>
                                 <Account />
                             </Content>
-
                         </Spin>
                     </Layout>
                 </Layout>

@@ -2,8 +2,7 @@ import React, { Component, Fragment } from 'react';
 import logo from '../../assets/logo.svg';
 import './MyHeader.css';
 import { Avatar, Dropdown, Menu, Icon } from 'antd';
-import Axios from 'axios';
-
+import {login} from '../../js/Api'
 
 class MyHeader extends Component {
 
@@ -15,15 +14,16 @@ class MyHeader extends Component {
     </Menu>);
 
 
-componentDidMount(){
-    Axios.post('/user').then(function (response) {
-        console.log(response);
-    })
-}
+    componentDidMount() {
+
+        login("huanggan", "123456", data => {
+            console.log(data)
+        })
+    }
 
     handleMenuClick() {
         alert('asdawdasdw')
-       
+
     };
 
 
