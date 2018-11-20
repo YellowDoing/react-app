@@ -1,76 +1,76 @@
 import React, { Component } from 'react';
 import './Account.css';
-import { Table, Pagination} from 'antd';
+import { Table, Pagination } from 'antd';
 
 
-const data = [{
-    key: '1',
-    nickname: '黄干1',
-    phone: '189****7537',
-    type: '管理员'
-}, {
-    key: '2',
-    nickname: '黄干2',
-    phone: '189****7537',
-    type: '会员'
-}, {
-    key: '3',
-    nickname: '黄干3',
-    phone: '189****7537',
-    type: '一般用户'
-}, {
-    key: '4',
-    nickname: '黄干3',
-    phone: '189****7537',
-    type: '一般用户'
-}, {
-    key: '5',
-    nickname: '黄干3',
-    phone: '189****7537',
-    type: '一般用户'
-}, {
-    key: '6',
-    nickname: '黄干3',
-    phone: '189****7537',
-    type: '一般用户'
-}, {
-    key: '7',
-    nickname: '黄干3',
-    phone: '189****7537',
-    type: '一般用户'
-}, {
-    key: '8',
-    nickname: '黄干3',
-    phone: '189****7537',
-    type: '一般用户'
-},
-{
-    key: '9',
-    nickname: '黄干3',
-    phone: '189****7537',
-    type: '一般用户'
-},
-{
-    key: '10',
-    nickname: '黄干3',
-    phone: '189****7537',
-    type: '一般用户'
-}];
+const data = [];
+for (let i = 0; i < 10; i++) {
+    data.push({
+        key: i,
+        id: i + 1,
+        area: '罗湖区',
+        streat: '桂园街道',
+        community: '大塘龙社区',
+        name: `大塘龙排水户 ${i}`,
+    });
+}
 
 
+//表格头部设置
 const columns = [{
-    title: '用户名',
-    dataIndex: 'nickname',
-    key: 'nickname',
-    render: text => <a href>{text}</a>,
+    title: '序号',
+    dataIndex: 'id',
 }, {
-    title: '手机号',
-    dataIndex: 'phone',
-    key: 'phone',
+    title: '市辖区',
+    dataIndex: 'area',
+    filters: [{
+        text: '罗湖区',
+        value: '罗湖区',
+    }, {
+        text: '南山区',
+        value: '南山区',
+    }, {
+        text: '福田区',
+        value: '福田区',
+    }, {
+        text: '保安区',
+        value: '保安区',
+    }, {
+        text: '龙岗区',
+        value: '龙岗区',
+    }, {
+        text: '盐田区',
+        value: '盐田区',
+    }, {
+        text: '龙华区',
+        value: '龙华区',
+    }, {
+        text: '坪山区',
+        value: '坪山区',
+    }, {
+        text: '光明区',
+        value: '光明区',
+    }, {
+        text: '大鹏新区',
+        value: '大鹏新区',
+    }, {
+        text: '深汕合作区',
+        value: '深汕合作区',
+    }],
+    filterMultiple: false,
+    onFilter: (value, record) =>{
+        console.log(value)
+        console.log(record)
+    }
 }, {
-    title: '账户类型',
-    dataIndex: 'type',
-    key: 'type',
+    title: '街道',
+    dataIndex: 'streat',
+}, {
+    title: '社区',
+    dataIndex: 'community',
+}, {
+    title: '排水户',
+    dataIndex: 'name',
 }, {
     title: '操作',
     fixed: 'right',
@@ -84,6 +84,8 @@ const columns = [{
         </span>
     ),
 }];
+
+
 
 class Account extends Component {
 

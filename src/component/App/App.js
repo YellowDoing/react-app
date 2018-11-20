@@ -37,19 +37,24 @@ class App extends Component {
                             </Menu.Item>
 
                             <SubMenu key="账户管理" title={<span><Icon type="user" />账户管理</span>}>
-                                <Menu.Item key="账户管理-1">option1</Menu.Item>
-                                <Menu.Item key="账户管理-2">option2</Menu.Item>
-                                <Menu.Item key="账户管理-3">option3</Menu.Item>
-                                <Menu.Item key="账户管理-4">option4</Menu.Item>
+                                <Menu.Item key="检查员">检查员</Menu.Item>
+                                <Menu.Item key="审核员">审核员</Menu.Item>
+                                <Menu.Item key="查询员">查询员</Menu.Item>
                             </SubMenu>
 
-                            <SubMenu key="社区" title={<span><Icon type="compass" />社区</span>}>
-                                <Menu.Item key="社区-1">option5</Menu.Item>
-                                <Menu.Item key="社区-2">option6</Menu.Item>
-                                <Menu.Item key="社区-3">option7</Menu.Item>
-                                <Menu.Item key="社区-4">option8</Menu.Item>
+                            <SubMenu key="数据普查" title={<span><Icon type="bar-chart" />数据普查</span>}>
+                                <Menu.Item key="已普查">已普查</Menu.Item>
+                                <Menu.Item key="待普查">待普查</Menu.Item>
                             </SubMenu>
 
+                            <SubMenu key="数据审核" title={<span><Icon type="area-chart"/>数据审核</span>}>
+                                <Menu.Item key="已审核">已审核</Menu.Item>
+                                <Menu.Item key="待审核">待审核</Menu.Item>
+                    
+                            </SubMenu>
+
+                            <SubMenu key="数据查询" title={<span><Icon type="dot-chart" />数据查询</span>}>
+                            </SubMenu>
                         </Menu>
                     </Sider>
 
@@ -71,7 +76,6 @@ class App extends Component {
                     </Layout>
                 </Layout>
             </Layout>
-
         );
     }
 

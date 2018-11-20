@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import logo from '../../assets/logo.svg';
 import './MyHeader.css';
 import { Avatar, Dropdown, Menu, Icon } from 'antd';
-import {login} from '../../js/Api'
 
 class MyHeader extends Component {
 
@@ -14,16 +13,9 @@ class MyHeader extends Component {
     </Menu>);
 
 
-    componentDidMount() {
-
-        login("huanggan", "123456", data => {
-            console.log(data)
-        })
-    }
 
     handleMenuClick() {
         alert('asdawdasdw')
-
     };
 
 
@@ -31,12 +23,12 @@ class MyHeader extends Component {
         return (
             <Fragment>
                 <img alt='logo' src={logo} width='34px' height='34px' />
-                <span className='title'>华币数字交易所</span>
+                <span className='title'>深圳市排水户管理系统</span>
                 <div className='user'>
                     <Dropdown placement='bottomCenter' overlay={this.menu}>
                         <div>
                             <Avatar className='avatar' icon="user" />
-                            <span className='name'>用户名</span>
+                            <span className='name'>罗湖审查员1</span>
                         </div>
                     </Dropdown>
                 </div>
