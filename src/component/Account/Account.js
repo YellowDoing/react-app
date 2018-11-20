@@ -8,10 +8,10 @@ for (let i = 0; i < 10; i++) {
     data.push({
         key: i,
         id: i + 1,
-        area: '罗湖区',
-        streat: '桂园街道',
-        community: '大塘龙社区',
-        name: `大塘龙排水户 ${i}`,
+        area: '坪山区',
+        streat: '坪山街道',
+        community: '六联社区',
+        name: `六联排水户 ${i}`,
     });
 }
 

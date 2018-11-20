@@ -5,7 +5,6 @@ import { Spin, Layout, Menu, Breadcrumb, Icon } from 'antd';
 import Account from '../Account/Account'
 import MyHeader from '../MyHeader/MyHeader'
 
-
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 

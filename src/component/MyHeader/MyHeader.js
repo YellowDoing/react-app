@@ -9,10 +9,7 @@ class MyHeader extends Component {
     menu = (<Menu style={{ paddingRight: '15px' }} onClick={this.handleMenuClick}>
         <Menu.Item key="1"><Icon type="user" />个人中心</Menu.Item>
         <Menu.Item key="2"><Icon type="setting" />退出登录</Menu.Item>
-
     </Menu>);
-
-
 
     handleMenuClick() {
         alert('asdawdasdw')
