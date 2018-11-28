@@ -59,8 +59,7 @@ const columns = [{
     }],
     filterMultiple: false,
     onFilter: (value, record) =>{
-        console.log(value)
-        console.log(record)
+
     }
 }, {
     title: '街道',

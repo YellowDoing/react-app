@@ -49,7 +49,6 @@ class App extends Component {
                             <SubMenu key="数据审核" title={<span><Icon type="area-chart"/>数据审核</span>}>
                                 <Menu.Item key="已审核">已审核</Menu.Item>
                                 <Menu.Item key="待审核">待审核</Menu.Item>
-                    
                             </SubMenu>
 
                             <SubMenu key="数据查询" title={<span><Icon type="dot-chart" />数据查询</span>}>
