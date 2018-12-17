@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import './Login.css';
 import {Form, Icon, Input, Button, Checkbox} from 'antd';
 
@@ -22,7 +22,6 @@ class Login extends Component {
         const {getFieldDecorator} = this.props.form;
         return (
             <div className='el-root'>
-
                 <Form onSubmit={this.handleSubmit} className="login-form">
                     <FormItem>
                         {getFieldDecorator('userName', {
