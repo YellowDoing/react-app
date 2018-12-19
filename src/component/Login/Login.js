@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Login.css';
 import {Form, Icon, Input, Button, Checkbox} from 'antd';
+import logo from '../../assets/logo.svg'
 
 const FormItem = Form.Item;
 
@@ -15,14 +16,20 @@ class Login extends Component {
                 console.log('Received values of form: ', values);
             }
         });
-    }
-
+    };
 
     render() {
         const {getFieldDecorator} = this.props.form;
         return (
             <div className='el-root'>
                 <Form onSubmit={this.handleSubmit} className="login-form">
+
+
+                    <div className='logo-layout'>
+                        <img className='logo' src={logo}/>
+                    </div>
+
+
                     <FormItem>
                         {getFieldDecorator('userName', {
                             rules: [{required: true, message: '请输入您的账号!'}],
@@ -30,6 +37,7 @@ class Login extends Component {
                             <Input prefix={<Icon type="user" style={{fontSize: 13}}/>} placeholder="账号"/>
                         )}
                     </FormItem>
+
                     <FormItem>
                         {getFieldDecorator('password', {
                             rules: [{required: true, message: '请输入您的密码!'}],
@@ -38,6 +46,7 @@ class Login extends Component {
                                    placeholder="密码"/>
                         )}
                     </FormItem>
+
                     <FormItem>
                         {getFieldDecorator('remember', {
                             valuePropName: 'checked',
@@ -52,7 +61,6 @@ class Login extends Component {
                     </FormItem>
                 </Form>
             </div>
-
         );
     }
 }

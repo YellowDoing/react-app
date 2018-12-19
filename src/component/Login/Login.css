@@ -3,8 +3,8 @@
     top: 45%;
     left: 50%;
     margin: -160px 0 0 -160px;
-    width: 320px;
-    height: 320px;
+    width: 340px;
+    height: 390px;
     padding: 36px;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
 }
@@ -15,7 +15,21 @@
     width: 100%;
 }
 
+ .logo{
+
+     width: 64px;
+     height: 64px;
+
+ }
+
+ .logo-layout{
+     margin-bottom: 24px;
+     text-align: center;
+ }
+
  .el-root{
+     /*background-image: url('https://www.baidu.com/img/bd_logo1.png');*/
+
   /*   display: flex;
      height: 100%;
      width: 100%;
